@@ -1,0 +1,23 @@
+const axios = require('axios');
+
+const response = await axios.post('https://ducktapewms.com/api/items', {
+  name: "Duck Tape (Extra Sticky)",
+  sku: "TAPE-001",
+  description: "The stickiest tape in the pond",
+  category: "Office Supplies",
+  price: 8.99,
+  cost: 3.50,
+  weight: 0.5,
+  dimensions: {
+    length: 5,
+    width: 2,
+    height: 2
+  }
+}, {
+  headers: {
+    'X-API-Key': 'YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+console.log(response.data);

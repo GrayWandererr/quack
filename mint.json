@@ -1,0 +1,74 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "DuckTape WMS",
+  "logo": {
+    "dark": "/logo/duck-dark.svg",
+    "light": "/logo/duck-light.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#FFD700",
+    "light": "#FFF5B1",
+    "dark": "#B58500",
+    "anchors": {
+      "from": "#FFD700",
+      "to": "#FFA500"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@ducktapewms.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://ducktapewms.com/dashboard"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api"
+    },
+    {
+      "name": "User Guides",
+      "url": "guides"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://quack.ducktapewms.com"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/ducktapewms"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://ducktapewms.com/blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "authentication"]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api/overview", "api/items", "api/inventory", "api/orders"]
+    },
+    {
+      "group": "User Guides",
+      "pages": ["guides/overview", "guides/dashboard", "guides/inventory-management", "guides/order-processing"]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/ducktapewms",
+    "github": "https://github.com/ducktapewms",
+    "linkedin": "https://www.linkedin.com/company/ducktapewms"
+  }
+}

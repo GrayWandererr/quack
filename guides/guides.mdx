@@ -1,0 +1,127 @@
+
+### `api/inventory.mdx`
+
+```mdx
+---
+title: 'Inventory API'
+description: 'Track your stock levels across locations'
+---
+
+# Inventory API
+
+The Inventory API allows you to track stock levels across your warehouse locations. Like tracking where each duck is swimming in your pond, this API helps you keep tabs on every item in your warehouse!
+
+## Get All Inventory
+
+Retrieve current inventory levels with optional filtering.
+
+<ParamField query="item_id" type="string">
+  Filter by item ID
+</ParamField>
+
+<ParamField query="location_id" type="string">
+  Filter by location ID
+</ParamField>
+
+<ParamField query="sku" type="string">
+  Filter by SKU (partial match)
+</ParamField>
+
+<ParamField query="bin_location" type="string">
+  Filter by bin location (partial match)
+</ParamField>
+
+<ParamField query="low_stock" type="boolean">
+  Set to "true" to show only low stock items
+</ParamField>
+
+<ParamField query="page" type="integer" default="1">
+  Page number for pagination
+</ParamField>
+
+<ParamField query="limit" type="integer" default="20">
+  Number of items per page
+</ParamField>
+
+<RequestExample>
+```bash cURL
+curl -X GET "https://ducktapewms.com/api/inventory?sku=TAPE&limit=10" \
+  -H "X-API-Key: YOUR_API_KEY"
+```
+
+```javascript Node.js
+const axios = require('axios');
+
+const response = await axios.get('https://ducktapewms.com/api/inventory', {
+  params: {
+    sku: 'TAPE',
+    limit: 10
+  },
+  headers: {
+    'X-API-Key': 'YOUR_API_KEY'
+  }
+});
+
+console.log(response.data);
+```
+</RequestExample>
+
+<ResponseExample>
+```json Response
+{
+  "data": [
+    {
+      "id": "test-inventory-1",
+      "item_id": "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890",
+      "item_name": "Duck Tape (Extra Sticky)",
+      "sku": "TAPE-001",
+      "location_id": "loc-001",
+      "location_name": "Main Warehouse",
+      "zone": "A",
+      "aisle": "3",
+      "shelf": "B",
+      "bin": "2",
+      "bin_location": "A3-B2",
+      "quantity_on_hand": 120,
+      "quantity_reserved": 5,
+      "quantity_available": 115,
+      "last_count_date": "2025-04-02T18:30:00.000Z"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 1,
+    "totalPages": 1
+  }
+}
+```
+</ResponseExample>
+
+## Inventory Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `id` | string | Unique identifier for the inventory record |
+| `item_id` | string | ID of the item |
+| `item_name` | string | Name of the item |
+| `sku` | string | Stock Keeping Unit |
+| `location_id` | string | ID of the warehouse location |
+| `location_name` | string | Name of the warehouse location |
+| `zone` | string | Warehouse zone |
+| `aisle` | string | Warehouse aisle |
+| `shelf` | string | Shelf identifier |
+| `bin` | string | Bin identifier |
+| `bin_location` | string | Formatted location string |
+| `quantity_on_hand` | number | Total quantity in this location |
+| `quantity_reserved` | number | Quantity reserved for orders |
+| `quantity_available` | number | On-hand minus reserved |
+| `last_count_date` | string | Date of last inventory count |
+
+<Warning>
+  Low inventory is like a duck with too few feathers - it's going to have trouble staying afloat! Monitor your low_stock items carefully.
+</Warning>
+
+## Understanding Bin Locations
+
+In DuckTape WMS, locations are structured hierarchically:

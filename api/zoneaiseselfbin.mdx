@@ -1,0 +1,17 @@
+curl -X POST "https://ducktapewms.com/api/items" \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Duck Tape (Extra Sticky)",
+    "sku": "TAPE-001",
+    "description": "The stickiest tape in the pond",
+    "category": "Office Supplies",
+    "price": 8.99,
+    "cost": 3.50,
+    "weight": 0.5,
+    "dimensions": {
+      "length": 5,
+      "width": 2,
+      "height": 2
+    }
+  }'

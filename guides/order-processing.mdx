@@ -1,0 +1,211 @@
+  <Step title="Review and Submit">
+    Double-check all details and click "Create Order" to submit.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/create-order.png" alt="Creating a New Order" />
+</Frame>
+
+### Importing Orders
+
+For bulk order processing or integration with e-commerce platforms:
+
+1. Go to "Orders" → "Import Orders"
+2. Select your import format (CSV, JSON, or XML)
+3. Upload your file or connect to your e-commerce platform
+4. Map the fields to DuckTape WMS fields (first-time only)
+5. Review the order data preview
+6. Click "Import Orders" to process
+
+<Tip>
+  Set up automated order imports from your online store to save time! Like a duck's automatic homing instinct, your orders will find their way into the system without manual effort.
+</Tip>
+
+## Order Fulfillment Process
+
+Orders in DuckTape WMS follow a structured fulfillment workflow:
+
+<Steps>
+  <Step title="Pending">
+    New orders start in the pending status, awaiting processing.
+  </Step>
+  <Step title="Picking">
+    Items are gathered from warehouse locations.
+  </Step>
+  <Step title="Packing">
+    Items are packaged and prepared for shipment.
+  </Step>
+  <Step title="Shipping">
+    Orders are labeled and handed off to carriers.
+  </Step>
+  <Step title="Delivered">
+    Orders have reached their destination.
+  </Step>
+</Steps>
+
+<Note>
+  Each step has its own dedicated tab in the Orders interface, making it easy to see where every order stands - like watching ducks progress across a pond!
+</Note>
+
+## Pick, Pack, and Ship
+
+### Picking Orders
+
+<Steps>
+  <Step title="Go to Picking">
+    Navigate to "Orders" → "Picking" tab.
+  </Step>
+  <Step title="Create Pick List">
+    Select orders to pick or use filters to create batch picks.
+  </Step>
+  <Step title="Print Pick List">
+    Generate a picking document with optimized routes.
+  </Step>
+  <Step title="Gather Items">
+    Collect items from their warehouse locations.
+  </Step>
+  <Step title="Mark as Picked">
+    Scan items or manually update picking status.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/pick-list.png" alt="Sample Pick List" />
+</Frame>
+
+<Tip>
+  Wave picking (picking multiple orders at once by location) can save significant time! It's like a duck collecting multiple pieces of bread in one dive.
+</Tip>
+
+### Packing Orders
+
+Once items are picked, it's time to package them:
+
+1. Go to "Orders" → "Packing" tab
+2. Select an order to pack
+3. Verify all items are present
+4. Scan each item as you place it in the package
+5. Add packing materials as needed
+6. Enter package dimensions and weight
+7. Mark the order as packed
+
+<Warning>
+  Always double-check that you've included all items before sealing packages! A duck would never leave one of her ducklings behind, and you shouldn't leave any items behind either!
+</Warning>
+
+### Shipping Orders
+
+The final step in order fulfillment:
+
+<Steps>
+  <Step title="Go to Shipping">
+    Navigate to "Orders" → "Shipping" tab.
+  </Step>
+  <Step title="Select Order">
+    Choose a packed order ready for shipping.
+  </Step>
+  <Step title="Select Carrier">
+    Choose your shipping carrier (FedEx, UPS, USPS, etc.).
+  </Step>
+  <Step title="Create Label">
+    Generate and print shipping labels.
+  </Step>
+  <Step title="Mark as Shipped">
+    Update the order status and enter tracking information.
+  </Step>
+  <Step title="Send Notification">
+    Automatically notify the customer that their order is on its way.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/shipping-label.png" alt="Sample Shipping Label" />
+</Frame>
+
+## Managing Order Issues
+
+### Order Modifications
+
+Need to make changes to an existing order?
+
+1. Find the order in the list
+2. Click "Edit Order"
+3. Make necessary changes to items, quantities, addresses, etc.
+4. Save changes
+
+<Note>
+  You can only modify orders that haven't been shipped yet! Once the duck has flown the pond, you can't change its flight path.
+</Note>
+
+### Order Cancellations
+
+To cancel an order:
+
+1. Find the order in the list
+2. Click the "Actions" dropdown
+3. Select "Cancel Order"
+4. Provide a reason for cancellation
+5. Click "Confirm Cancellation"
+
+Cancelled orders will automatically return allocated inventory to stock.
+
+### Returns Processing
+
+Handle customer returns efficiently:
+
+<Steps>
+  <Step title="Create Return">
+    Go to "Orders" → "Returns" → "New Return".
+  </Step>
+  <Step title="Select Original Order">
+    Search for and select the original order.
+  </Step>
+  <Step title="Specify Return Items">
+    Select which items are being returned and the quantities.
+  </Step>
+  <Step title="Indicate Reason">
+    Document the reason for each returned item.
+  </Step>
+  <Step title="Process Return">
+    Issue refunds if needed and decide whether to return items to inventory.
+  </Step>
+</Steps>
+
+<Tip>
+  Set up a dedicated return inspection area in your warehouse - like a duck's quarantine pond for checking returning ducklings!
+</Tip>
+
+## Order Analytics
+
+Make data-driven decisions with these order reports:
+
+- **Order Volume**: Track orders over time
+- **Fulfillment Time**: Measure how long it takes to process orders
+- **Popular Items**: See which products are ordered most frequently
+- **Customer Insights**: View ordering patterns by customer
+- **Returns Analysis**: Understand why items are being returned
+
+<Frame>
+  <img src="/images/order-analytics.png" alt="Order Analytics Dashboard" />
+</Frame>
+
+<Warning>
+  Past performance is not always indicative of future results. Even ducks can change their migration patterns if conditions change!
+</Warning>
+
+## Order Processing Tips
+
+<AccordionGroup>
+  <Accordion title="Batch Processing">
+    Process similar orders together to improve efficiency. Group orders by shipping method, destination region, or product type.
+  </Accordion>
+  <Accordion title="Priority Handling">
+    Flag expedited orders with a visual indicator so your team knows to process them first. DuckTape WMS supports color coding and special icons for priority orders.
+  </Accordion>
+  <Accordion title="Automated Rules">
+    Set up rules to automatically assign orders to specific team members based on order characteristics like size, value, or shipping method.
+  </Accordion>
+</AccordionGroup>
+
+Remember, a smooth order process keeps your customers happy and coming back - just like ducks returning to their favorite pond year after year!
