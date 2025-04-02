@@ -38,6 +38,7 @@ The Items API allows you to manage your product catalog within DuckTape WMS. Thi
 </ParamField>
 
 <RequestExample>
+
 ```bash cURL
 curl -X GET "https://ducktapewms.com/api/items?category=office&limit=10" \
   -H "X-API-Key: YOUR_API_KEY"
@@ -57,3 +58,6 @@ const response = await axios.get('https://ducktapewms.com/api/items', {
 });
 
 console.log(response.data);
+```
+
+</RequestExample>

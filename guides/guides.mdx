@@ -1,7 +1,3 @@
-
-### `api/inventory.mdx`
-
-```mdx
 ---
 title: 'Inventory API'
 description: 'Track your stock levels across locations'
@@ -44,6 +40,7 @@ Retrieve current inventory levels with optional filtering.
 </ParamField>
 
 <RequestExample>
+
 ```bash cURL
 curl -X GET "https://ducktapewms.com/api/inventory?sku=TAPE&limit=10" \
   -H "X-API-Key: YOUR_API_KEY"
@@ -64,9 +61,11 @@ const response = await axios.get('https://ducktapewms.com/api/inventory', {
 
 console.log(response.data);
 ```
+
 </RequestExample>
 
 <ResponseExample>
+
 ```json Response
 {
   "data": [
@@ -96,6 +95,7 @@ console.log(response.data);
   }
 }
 ```
+
 </ResponseExample>
 
 ## Inventory Properties
